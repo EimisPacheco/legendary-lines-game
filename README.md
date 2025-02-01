@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+## Inspiration  
+I’ve always loved trivia games that challenge your memory and knowledge of famous quotes and phrases. I wanted to take that concept further and make it more exciting by using AI to generate dynamic and unique challenges. I was inspired to create something that feels fresh, fun, and tests players in categories they enjoy—whether it’s music, movies, books, or even poetry.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What it does  
+Legendary Lines Game is an AI-powered trivia game where players identify the source of iconic phrases and can earn extra points by guessing the year it was said. The game covers categories like songs, movies, famous people, fictional characters, books, and more. Players get more points for harder categories and can double their score by correctly guessing the year and the triple for guessing the Director for movies, Artist/Band for songs or Author for books —but they also risk losing points if they’re wrong!
 
-## Available Scripts
+I created my own points-based compensation system from my imagination. Since it's easier to remember phrases from songs and movies than from books and other sources, the app rewards you with more points for choosing more challenging categories like books. This encourages better memory retention and a greater challenge.
 
-In the project directory, you can run:
+## How we built it  
+I used **React** to build the user interface for a seamless and engaging experience. The backend leverages **AWS Lambda functions** to handle API requests, connected through **API Gateway** for routing and communication. I used **S3** for storing game-related data and assets, and I also integrated **Amazon Q Developer** and **Q Framework** to manage interactions with GPT-4 for generating trivia content and providing phrase hints. This combination ensures that the game runs smoothly with low latency and scalability.
 
-### `npm start`
+## Challenges we ran into  
+One of the biggest challenges was ensuring the GPT-4 responses stayed relevant and aligned with the game format. I had to refine prompts and manage response validation to avoid phrases that were too obscure or ambiguous. Another challenge was optimizing the Lambda functions and handling timeouts, especially when handling multiple API calls. Integrating Amazon Q Developer in a way that felt responsive and natural also took some iteration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Accomplishments that we're proud of  
+I’m proud of how intuitive and fun the game feels! The integration between the UI and backend is seamless, and players get an immersive experience. I’m also proud of successfully using AWS services like S3, Lambda, and API Gateway to build a robust, scalable game. Another accomplishment was making the gameplay highly customizable with flexible categories and scoring options.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What we learned  
+I learned a lot about designing efficient Lambda functions and optimizing API Gateway routes for faster performance. I also improved my skills in working with GPT-4, understanding how to fine-tune prompts for better results. Additionally, I gained a deeper understanding of the Amazon Q Developer tools and how they can enhance AI-driven applications. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for Legendary Lines Game  
+The next step is to add multiplayer support, allowing players to challenge friends or compete in live leaderboards. I also want to introduce custom game modes where users can suggest their own favorite phrases to the game. Additionally, I plan to improve personalization, allowing the AI to adjust the difficulty level based on each player’s performance history. Finally, I aim to expand the categories to include pop culture trends, historical speeches, and even fun regional sayings!
